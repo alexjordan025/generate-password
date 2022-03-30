@@ -39,3 +39,47 @@ function generatePassword() {
     return window.alert("Password must be 8 through 126 characters long!"),
     console.log("Generate Password Again!")
   }
+
+//make sure the user typed in a number and not like, a word.
+//and if it is a number, make sure it is within bounds
+
+//ask the user do you want lowercase? 
+//if yes, chosenChar += lowerCase
+
+userChoiceLower = confirm("Would you like lowercase letters in password?")
+if (userChoiceLower) {
+  chosenChars += lowerCase
+}
+userChoiceUpper = confirm("Would you like uppercase letters in password?")
+if (userChoiceUpper) {
+  chosenChars += upperCase
+}
+userChoiceNumbers = confirm("Would you like numbers in password?")
+if (userChoiceNumbers) {
+  chosenChars += numbers
+}
+userChoiceSpecialCharacters = confirm("Would you like specials character in password?")
+if (userChoiceSpecialCharacters) {
+  chosenChars += specialCharacters
+}
+
+
+//must pick at least one of the variables above
+  //ask the user do you want Upper?
+  //if yes, chosenChar ++ upperCase
+
+  //and so on for number and spec...
+
+
+  //loop for passLength number of times
+  //each time, get a random char from the "chosenChars" string
+  //put that character into creatingPassword
+  for (var i = 0; i < passLength; i++) {
+    //genearate a random number between 0 and chosenChars.length
+    var randomIndex = Math.floor(Math.random() * chosenChars.length);
+    var randomChar = chosenChars[randomIndex]
+    creatingPassword += randomChar
+  }
+
+  return creatingPassword
+}
