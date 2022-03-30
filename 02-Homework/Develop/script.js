@@ -21,3 +21,8 @@ function generatePassword(){
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Adding prompts to ask user the complexity of password
+function generatePassword() {
+  var creatingPassword = ""
+  var chosenChars = ""
