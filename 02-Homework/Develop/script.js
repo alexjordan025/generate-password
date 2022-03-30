@@ -26,3 +26,16 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   var creatingPassword = ""
   var chosenChars = ""
+
+
+//ask the user now many chars (passLength)
+  var passLength = prompt(
+    "Choose a length of at least 8 characters and no more than 130 characters."
+  )
+
+  if (passLength >= 8 && passLength <= 126) {
+    
+  } else {
+    return window.alert("Password must be 8 through 126 characters long!"),
+    console.log("Generate Password Again!")
+  }
